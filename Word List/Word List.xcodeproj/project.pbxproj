@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B869FDA73A947BF1A1463778 /* Pods_Word_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B32C2591EBBD7DA47FC7A60 /* Pods_Word_List.framework */; };
 		F42626C01F306687005EF6F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42626BF1F306687005EF6F0 /* AppDelegate.swift */; };
 		F42626C21F306687005EF6F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42626C11F306687005EF6F0 /* ViewController.swift */; };
 		F42626C51F306687005EF6F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42626C31F306687005EF6F0 /* Main.storyboard */; };
 		F42626C71F306687005EF6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42626C61F306687005EF6F0 /* Assets.xcassets */; };
 		F42626CA1F306687005EF6F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42626C81F306687005EF6F0 /* LaunchScreen.storyboard */; };
+		F42627011F31F895005EF6F0 /* Word List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F42626FF1F31F895005EF6F0 /* Word List.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B32C2591EBBD7DA47FC7A60 /* Pods_Word_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Word_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		571BDCE71053AB66A50756EA /* Pods-Word List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Word List.release.xcconfig"; path = "Pods/Target Support Files/Pods-Word List/Pods-Word List.release.xcconfig"; sourceTree = "<group>"; };
+		E39CA09D0A644F0AB34CF084 /* Pods-Word List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Word List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Word List/Pods-Word List.debug.xcconfig"; sourceTree = "<group>"; };
 		F42626BC1F306687005EF6F0 /* Word List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42626BF1F306687005EF6F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42626C11F306687005EF6F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		F42626C61F306687005EF6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F42626C91F306687005EF6F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F42626CB1F306687005EF6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42627001F31F895005EF6F0 /* Word List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Word List.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B869FDA73A947BF1A1463778 /* Pods_Word_List.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CC865E7CEE6BBD3A4014A15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B32C2591EBBD7DA47FC7A60 /* Pods_Word_List.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA6294BCBDE65621E7496DBA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E39CA09D0A644F0AB34CF084 /* Pods-Word List.debug.xcconfig */,
+				571BDCE71053AB66A50756EA /* Pods-Word List.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F42626B31F306687005EF6F0 = {
 			isa = PBXGroup;
 			children = (
 				F42626BE1F306687005EF6F0 /* Word List */,
 				F42626BD1F306687005EF6F0 /* Products */,
+				CA6294BCBDE65621E7496DBA /* Pods */,
+				3CC865E7CEE6BBD3A4014A15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,55 @@
 		F42626BE1F306687005EF6F0 /* Word List */ = {
 			isa = PBXGroup;
 			children = (
-				F42626BF1F306687005EF6F0 /* AppDelegate.swift */,
-				F42626C11F306687005EF6F0 /* ViewController.swift */,
-				F42626C31F306687005EF6F0 /* Main.storyboard */,
-				F42626C61F306687005EF6F0 /* Assets.xcassets */,
-				F42626C81F306687005EF6F0 /* LaunchScreen.storyboard */,
-				F42626CB1F306687005EF6F0 /* Info.plist */,
+				F42626FC1F31F6A5005EF6F0 /* Views */,
+				F42626FE1F31F739005EF6F0 /* Extensions */,
+				F42626FD1F31F6BA005EF6F0 /* Controllers */,
+				F42626F91F31F62E005EF6F0 /* Helpers */,
+				F42626F81F31F5E1005EF6F0 /* Models */,
 			);
 			path = "Word List";
+			sourceTree = "<group>";
+		};
+		F42626F81F31F5E1005EF6F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F42626BF1F306687005EF6F0 /* AppDelegate.swift */,
+				F42626C61F306687005EF6F0 /* Assets.xcassets */,
+				F42626C31F306687005EF6F0 /* Main.storyboard */,
+				F42626C81F306687005EF6F0 /* LaunchScreen.storyboard */,
+				F42626CB1F306687005EF6F0 /* Info.plist */,
+				F42626FF1F31F895005EF6F0 /* Word List.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F42626F91F31F62E005EF6F0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		F42626FC1F31F6A5005EF6F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F42626FD1F31F6BA005EF6F0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F42626C11F306687005EF6F0 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F42626FE1F31F739005EF6F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F42626CE1F306687005EF6F0 /* Build configuration list for PBXNativeTarget "Word List" */;
 			buildPhases = (
+				79054BC06BEABAA16B6FE0B8 /* [CP] Check Pods Manifest.lock */,
 				F42626B81F306687005EF6F0 /* Sources */,
 				F42626B91F306687005EF6F0 /* Frameworks */,
 				F42626BA1F306687005EF6F0 /* Resources */,
+				B65C30B919868A9A059F31E8 /* [CP] Embed Pods Frameworks */,
+				05A9BBE955000E8EB9984B92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +202,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05A9BBE955000E8EB9984B92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Word List/Pods-Word List-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79054BC06BEABAA16B6FE0B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B65C30B919868A9A059F31E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Word List/Pods-Word List-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F42626B81F306687005EF6F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F42626C21F306687005EF6F0 /* ViewController.swift in Sources */,
+				F42627011F31F895005EF6F0 /* Word List.xcdatamodeld in Sources */,
 				F42626C01F306687005EF6F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +378,7 @@
 		};
 		F42626CF1F306687005EF6F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E39CA09D0A644F0AB34CF084 /* Pods-Word List.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D2MYM7T4AW;
@@ -272,6 +392,7 @@
 		};
 		F42626D01F306687005EF6F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571BDCE71053AB66A50756EA /* Pods-Word List.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D2MYM7T4AW;
@@ -302,8 +423,22 @@
 				F42626D01F306687005EF6F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F42626FF1F31F895005EF6F0 /* Word List.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F42627001F31F895005EF6F0 /* Word List.xcdatamodel */,
+			);
+			currentVersion = F42627001F31F895005EF6F0 /* Word List.xcdatamodel */;
+			path = "Word List.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F42626B41F306687005EF6F0 /* Project object */;
 }

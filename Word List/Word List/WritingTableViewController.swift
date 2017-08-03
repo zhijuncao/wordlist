@@ -14,9 +14,9 @@ class WritingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             //1
-            CoreDataHelper.deleteWord(word: <#T##Words#>)(note: notes[indexPath.row])
+            CoreDataHelper.deleteWord(word: words[indexPath.row])
             //2
-            notes = CoreDataHelper.retrieveWord()
+            words = CoreDataHelper.retrieveWord()
         }
     }
     
@@ -34,26 +34,26 @@ class WritingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return words.count
     }
     
     // 2
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WordListTableViewCell", for: indexPath) as! WordListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WritingTableViewCell", for: indexPath) as! WritingTableViewCell
         
         // 1
         let row = indexPath.row
         
         // 2
-        let word = notes[row]
+        let word = words[row]
         
         // 3
-        cell.noteTitleLabel.text = note.title
+        cell.wordwLabel.text = word.wordTitle
         
         cell.contentView
         
         // 4
-        cell.noteModificationTimeLabel.text = note.modificationTime?.convertToString()
+        cell.wordwModificationTimeLabel.text = word.modificationTime?.convertToString()
         
         return cell
     }
@@ -61,26 +61,26 @@ class WritingTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
-            if identifier == "displayNote" {
+            if identifier == "displayWord" {
                 print("Table view cell tapped")
                 
                 // 1
                 let indexPath = tableView.indexPathForSelectedRow!
                 // 2
-                let note = notes[indexPath.row]
+                let word = words[indexPath.row]
                 // 3
-                let displayNoteViewController = segue.destination as! DisplayNoteViewController
+                let WritingViewController = segue.destination as! WritingViewController
                 // 4
-                displayNoteViewController.note = note
+                WritingViewController.word = word
                 
-            } else if identifier == "addNote" {
+            } else if identifier == "addWord" {
                 print("+ button tapped")
             }
         }
     }
     
-    @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
-        self.notes = CoreDataHelper.retrieveNotes()
+    @IBAction func unwindToWritingViewController(_ segue: UIStoryboardSegue) {
+        self.words = CoreDataHelper.retrieveWord()
     }
     
 }

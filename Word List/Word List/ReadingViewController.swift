@@ -15,12 +15,14 @@ class ReadingViewController: UIViewController {
     @IBOutlet weak var wordTitleTextField: UITextField!
 
     @IBOutlet weak var translationTextField: UITextField!
+
+    @IBOutlet weak var annotationTextView: UITextView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         wordTitleTextField.text = word?.wordTitle ?? ""
-        translationTextField.text = word?.translation ?? "translation"
-        
+        translationTextField.text = word?.translation ?? ""
+        annotationTextView.text = word?.annotation ?? "annotation:"
     }
     //        // 1
     //        if let note = note {

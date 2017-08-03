@@ -10,11 +10,10 @@ import Foundation
 import UIKit
 
 class WritingTableViewCell: UITableViewCell {
+  
+    @IBOutlet weak var wordwLabel: UILabel!
     
-    
-    @IBOutlet weak var noteTitleLabel: UILabel!
-    
-    @IBOutlet weak var noteModificationTimeLabel: UILabel!
+    @IBOutlet weak var wordwModificationTimeLabel: UILabel!
     
     
 }

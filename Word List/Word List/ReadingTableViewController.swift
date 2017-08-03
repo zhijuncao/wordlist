@@ -47,12 +47,12 @@ class ReadingTableViewController: UITableViewController {
         let word = words[row]
         
         // 3
-        cell.wordLabel.text = word.wordTitle
+        cell.wordrLabel.text = word.wordTitle
         
         cell.contentView
         
         // 4
-        cell.wordModificationTimeLabel.text = word.modificationTime?.convertToString()
+        cell.wordrModificationTimeLabel.text = word.modificationTime?.convertToString()
         
         return cell
     }
@@ -78,7 +78,7 @@ class ReadingTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
+    @IBAction func unwindToReadingViewController(_ segue: UIStoryboardSegue) {
         self.words = CoreDataHelper.retrieveWord()
     }
     

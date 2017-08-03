@@ -6,21 +6,22 @@
 //  Copyright © 2017年 make school. All rights reserved.
 //
 
+
 import Foundation
 import UIKit
 
 class WritingViewController: UIViewController {
     var word: Words?
     
-    @IBOutlet weak var noteContentTextView: UITextView!
     
-    @IBOutlet weak var noteTitleTextField: UITextField!
+    @IBOutlet weak var wordTitleTextField: UITextField!
     
+    @IBOutlet weak var translationTextField: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        noteTitleTextField.text = note?.title ?? ""
-        noteContentTextView.text = note?.content ?? "content:"
+        wordTitleTextField.text = word?.wordTitle ?? ""
+        translationTextField.text = word?.translation ?? "translation"
         
     }
     //        // 1
@@ -41,10 +42,11 @@ class WritingViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "save" {
             // if note exists, update title and content
-            let note = self.note ?? CoreDataHelper.newNote()
-            note.title = noteTitleTextField.text ?? ""
-            note.content = noteContentTextView.text ?? ""
-            note.modificationTime = Date() as NSDate
+            let word = self.word ?? CoreDataHelper.newWord()
+            word.wordTitle = wordTitleTextField.text ?? ""
+            word.translation = translationTextField.text ?? ""
+            word.modificationTime = Date() as NSDate
             CoreDataHelper.saveWord()
         }
+    }
 }

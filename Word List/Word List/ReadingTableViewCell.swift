@@ -11,8 +11,7 @@ import UIKit
 
 class ReadingTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var wordLabel: UITextField!
-    
-    @IBOutlet weak var wordModificationTimeLabel: UITextField!
-    
+    @IBOutlet weak var wordrLabel: UILabel!
+   
+    @IBOutlet weak var wordrModificationTimeLabel: UILabel!
 }

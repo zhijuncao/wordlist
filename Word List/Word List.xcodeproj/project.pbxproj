@@ -9,11 +9,19 @@
 /* Begin PBXBuildFile section */
 		B869FDA73A947BF1A1463778 /* Pods_Word_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B32C2591EBBD7DA47FC7A60 /* Pods_Word_List.framework */; };
 		F42626C01F306687005EF6F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42626BF1F306687005EF6F0 /* AppDelegate.swift */; };
-		F42626C21F306687005EF6F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42626C11F306687005EF6F0 /* ViewController.swift */; };
 		F42626C51F306687005EF6F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42626C31F306687005EF6F0 /* Main.storyboard */; };
 		F42626C71F306687005EF6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42626C61F306687005EF6F0 /* Assets.xcassets */; };
 		F42626CA1F306687005EF6F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42626C81F306687005EF6F0 /* LaunchScreen.storyboard */; };
 		F42627011F31F895005EF6F0 /* Word List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F42626FF1F31F895005EF6F0 /* Word List.xcdatamodeld */; };
+		F42627051F3286D7005EF6F0 /* ReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42627041F3286D7005EF6F0 /* ReadingViewController.swift */; };
+		F42627071F3287DC005EF6F0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42627061F3287DC005EF6F0 /* CoreDataHelper.swift */; };
+		F426270B1F328D2C005EF6F0 /* ReadingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426270A1F328D2C005EF6F0 /* ReadingTableViewController.swift */; };
+		F426270D1F328D4B005EF6F0 /* WritingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426270C1F328D4B005EF6F0 /* WritingTableViewController.swift */; };
+		F426270F1F328F1B005EF6F0 /* ReadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426270E1F328F1B005EF6F0 /* ReadingTableViewCell.swift */; };
+		F42627111F328F34005EF6F0 /* WritingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42627101F328F34005EF6F0 /* WritingTableViewCell.swift */; };
+		F42627131F32913F005EF6F0 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42627121F32913F005EF6F0 /* WritingViewController.swift */; };
+		F42627151F3294DF005EF6F0 /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42627141F3294DF005EF6F0 /* WordListViewController.swift */; };
+		F42627171F32A688005EF6F0 /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42627161F32A688005EF6F0 /* Date+convertToString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +30,20 @@
 		E39CA09D0A644F0AB34CF084 /* Pods-Word List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Word List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Word List/Pods-Word List.debug.xcconfig"; sourceTree = "<group>"; };
 		F42626BC1F306687005EF6F0 /* Word List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42626BF1F306687005EF6F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F42626C11F306687005EF6F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F42626C41F306687005EF6F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F42626C61F306687005EF6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F42626C91F306687005EF6F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F42626CB1F306687005EF6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F42627001F31F895005EF6F0 /* Word List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Word List.xcdatamodel"; sourceTree = "<group>"; };
+		F42627041F3286D7005EF6F0 /* ReadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingViewController.swift; sourceTree = "<group>"; };
+		F42627061F3287DC005EF6F0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		F426270A1F328D2C005EF6F0 /* ReadingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingTableViewController.swift; sourceTree = "<group>"; };
+		F426270C1F328D4B005EF6F0 /* WritingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingTableViewController.swift; sourceTree = "<group>"; };
+		F426270E1F328F1B005EF6F0 /* ReadingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingTableViewCell.swift; sourceTree = "<group>"; };
+		F42627101F328F34005EF6F0 /* WritingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingTableViewCell.swift; sourceTree = "<group>"; };
+		F42627121F32913F005EF6F0 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
+		F42627141F3294DF005EF6F0 /* WordListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
+		F42627161F32A688005EF6F0 /* Date+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+convertToString.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +121,7 @@
 		F42626F91F31F62E005EF6F0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F42627061F3287DC005EF6F0 /* CoreDataHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -112,6 +129,8 @@
 		F42626FC1F31F6A5005EF6F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F426270E1F328F1B005EF6F0 /* ReadingTableViewCell.swift */,
+				F42627101F328F34005EF6F0 /* WritingTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -119,7 +138,11 @@
 		F42626FD1F31F6BA005EF6F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F42626C11F306687005EF6F0 /* ViewController.swift */,
+				F42627041F3286D7005EF6F0 /* ReadingViewController.swift */,
+				F426270A1F328D2C005EF6F0 /* ReadingTableViewController.swift */,
+				F426270C1F328D4B005EF6F0 /* WritingTableViewController.swift */,
+				F42627121F32913F005EF6F0 /* WritingViewController.swift */,
+				F42627141F3294DF005EF6F0 /* WordListViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -127,6 +150,7 @@
 		F42626FE1F31F739005EF6F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F42627161F32A688005EF6F0 /* Date+convertToString.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -255,9 +279,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F42626C21F306687005EF6F0 /* ViewController.swift in Sources */,
+				F42627151F3294DF005EF6F0 /* WordListViewController.swift in Sources */,
+				F42627071F3287DC005EF6F0 /* CoreDataHelper.swift in Sources */,
+				F426270B1F328D2C005EF6F0 /* ReadingTableViewController.swift in Sources */,
+				F426270F1F328F1B005EF6F0 /* ReadingTableViewCell.swift in Sources */,
+				F42627111F328F34005EF6F0 /* WritingTableViewCell.swift in Sources */,
+				F426270D1F328D4B005EF6F0 /* WritingTableViewController.swift in Sources */,
 				F42627011F31F895005EF6F0 /* Word List.xcdatamodeld in Sources */,
+				F42627051F3286D7005EF6F0 /* ReadingViewController.swift in Sources */,
+				F42627131F32913F005EF6F0 /* WritingViewController.swift in Sources */,
 				F42626C01F306687005EF6F0 /* AppDelegate.swift in Sources */,
+				F42627171F32A688005EF6F0 /* Date+convertToString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

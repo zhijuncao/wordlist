@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ReadingViewController: UIViewController {
-    var word: Words?
+    var word: ReadingWords?
     
     @IBOutlet weak var wordTitleTextField: UITextField!
 
@@ -39,10 +39,12 @@ class ReadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "save" {
+        if segue.identifier == "Save" {
             // if note exists, update title and content
-            let word = self.word ?? CoreDataHelper.newWord()
+            let word = self.word ?? CoreDataHelper.newReadingWord()
             word.wordTitle = wordTitleTextField.text ?? ""
             word.translation = translationTextField.text ?? ""
             word.modificationTime = Date() as NSDate

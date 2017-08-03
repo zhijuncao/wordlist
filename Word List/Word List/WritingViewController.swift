@@ -18,11 +18,14 @@ class WritingViewController: UIViewController {
     
     @IBOutlet weak var translationTextField: UITextField!
     
+    @IBOutlet weak var annotationTextView: UITextView!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        wordTitleTextField.text = word?.wordTitle ?? ""
-        translationTextField.text = word?.translation ?? "translation"
         
+        wordTitleTextField.text = word?.wordTitle ?? ""
+        translationTextField.text = word?.translation ?? ""
+        annotationTextView.text = word?.annotation ?? "annotation:"
     }
     //        // 1
     //        if let note = note {
@@ -40,7 +43,7 @@ class WritingViewController: UIViewController {
         super.viewDidLoad()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "save" {
+        if segue.identifier == "Save" {
             // if note exists, update title and content
             let word = self.word ?? CoreDataHelper.newWord()
             word.wordTitle = wordTitleTextField.text ?? ""

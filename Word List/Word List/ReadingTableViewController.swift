@@ -13,21 +13,26 @@ class ReadingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             //1
-            CoreDataHelper.deleteWord(word: words[indexPath.row])
+            CoreDataHelper.deleteReadingWord(word: words[indexPath.row])
             //2
-            words = CoreDataHelper.retrieveWord()
+            words = CoreDataHelper.retrieveReadingWord()
         }
     }
     
-    var words = [Words]() {
+    var words = [ReadingWords]() {
         didSet {
             tableView.reloadData()
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        words = CoreDataHelper.retrieveReadingWord()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        words = CoreDataHelper.retrieveWord()
+        words = CoreDataHelper.retrieveReadingWord()
         
         print("hi- im the words branch")
     }
@@ -38,7 +43,7 @@ class ReadingTableViewController: UITableViewController {
     
     // 2
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReadingTableViewCell", for: indexPath) as! ReadingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "readingTableViewCell", for: indexPath) as! ReadingTableViewCell
         
         // 1
         let row = indexPath.row
@@ -49,7 +54,6 @@ class ReadingTableViewController: UITableViewController {
         // 3
         cell.wordrLabel.text = word.wordTitle
         
-        cell.contentView
         
         // 4
         cell.wordrModificationTimeLabel.text = word.modificationTime?.convertToString()
@@ -68,9 +72,9 @@ class ReadingTableViewController: UITableViewController {
                 // 2
                 let word = words[indexPath.row]
                 // 3
-                let readingViewController = segue.destination as! ReadingViewController
+                let ReadingViewController = segue.destination as! ReadingViewController
                 // 4
-                readingViewController.word = word
+                ReadingViewController.word = word
                 
             } else if identifier == "addWord" {
                 print("+ button tapped")
@@ -79,7 +83,7 @@ class ReadingTableViewController: UITableViewController {
     }
     
     @IBAction func unwindToReadingViewController(_ segue: UIStoryboardSegue) {
-        self.words = CoreDataHelper.retrieveWord()
+        self.words = CoreDataHelper.retrieveReadingWord()
     }
     
 }

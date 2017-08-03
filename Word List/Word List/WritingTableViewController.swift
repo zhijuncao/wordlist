@@ -26,6 +26,18 @@ class WritingTableViewController: UITableViewController {
         }
     }
     
+    
+//    var showWords = [Words]() {
+//        didSet {
+//            tableView.reloadData()
+//        }
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        words = CoreDataHelper.retrieveWord()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         words = CoreDataHelper.retrieveWord()
@@ -33,13 +45,14 @@ class WritingTableViewController: UITableViewController {
         print("hi- im the words branch")
     }
     
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return words.count
     }
     
     // 2
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WritingTableViewCell", for: indexPath) as! WritingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "writingTableViewCell", for: indexPath) as! WritingTableViewCell
         
         // 1
         let row = indexPath.row
@@ -49,8 +62,7 @@ class WritingTableViewController: UITableViewController {
         
         // 3
         cell.wordwLabel.text = word.wordTitle
-        
-        cell.contentView
+    
         
         // 4
         cell.wordwModificationTimeLabel.text = word.modificationTime?.convertToString()

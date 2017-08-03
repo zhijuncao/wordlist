@@ -14,6 +14,5 @@ class WritingTableViewCell: UITableViewCell {
     @IBOutlet weak var wordwLabel: UILabel!
     
     @IBOutlet weak var wordwModificationTimeLabel: UILabel!
-    
-    
+
 }

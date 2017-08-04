@@ -23,6 +23,7 @@ class ReadingViewController: UIViewController {
         wordTitleTextField.text = word?.wordTitle ?? ""
         translationTextField.text = word?.translation ?? ""
         annotationTextView.text = word?.annotation ?? "annotation:"
+//        FirebaseHelper.getReadingWords(wordTitle: word?.wordTitle ?? "", completion: nil)
     }
     //        // 1
     //        if let note = note {
@@ -48,7 +49,9 @@ class ReadingViewController: UIViewController {
             word.wordTitle = wordTitleTextField.text ?? ""
             word.translation = translationTextField.text ?? ""
             word.modificationTime = Date() as NSDate
+            word.annotation = annotationTextView.text ?? ""
             CoreDataHelper.saveWord()
+            FirebaseHelper.createReadingWords(annotation: word.annotation ?? "", translation: word.translation ?? "", wordTitle: word.wordTitle ?? "", wordModificationTime: word.modificationTime?.convertToString() ?? "")
         }
     }
 }

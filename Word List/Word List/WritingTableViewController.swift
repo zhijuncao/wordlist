@@ -17,6 +17,7 @@ class WritingTableViewController: UITableViewController {
             CoreDataHelper.deleteWord(word: words[indexPath.row])
             //2
             words = CoreDataHelper.retrieveWord()
+            
         }
     }
     
@@ -36,6 +37,7 @@ class WritingTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         words = CoreDataHelper.retrieveWord()
+        
     }
 
     override func viewDidLoad() {

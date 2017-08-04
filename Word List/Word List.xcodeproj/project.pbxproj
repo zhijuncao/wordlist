@@ -22,6 +22,10 @@
 		F42627131F32913F005EF6F0 /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42627121F32913F005EF6F0 /* WritingViewController.swift */; };
 		F42627151F3294DF005EF6F0 /* WordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42627141F3294DF005EF6F0 /* WordListViewController.swift */; };
 		F42627171F32A688005EF6F0 /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42627161F32A688005EF6F0 /* Date+convertToString.swift */; };
+		F42627191F331632005EF6F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F42627181F331632005EF6F0 /* GoogleService-Info.plist */; };
+		F426271B1F3317BE005EF6F0 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426271A1F3317BE005EF6F0 /* FirebaseHelper.swift */; };
+		F426271D1F33D95C005EF6F0 /* ReadingWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426271C1F33D95C005EF6F0 /* ReadingWord.swift */; };
+		F426271F1F33DA4A005EF6F0 /* WritingWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F426271E1F33DA4A005EF6F0 /* WritingWord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		F42627121F32913F005EF6F0 /* WritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		F42627141F3294DF005EF6F0 /* WordListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordListViewController.swift; sourceTree = "<group>"; };
 		F42627161F32A688005EF6F0 /* Date+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+convertToString.swift"; sourceTree = "<group>"; };
+		F42627181F331632005EF6F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F426271A1F3317BE005EF6F0 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		F426271C1F33D95C005EF6F0 /* ReadingWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingWord.swift; sourceTree = "<group>"; };
+		F426271E1F33DA4A005EF6F0 /* WritingWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritingWord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +120,11 @@
 				F42626C61F306687005EF6F0 /* Assets.xcassets */,
 				F42626C31F306687005EF6F0 /* Main.storyboard */,
 				F42626C81F306687005EF6F0 /* LaunchScreen.storyboard */,
+				F42627181F331632005EF6F0 /* GoogleService-Info.plist */,
 				F42626CB1F306687005EF6F0 /* Info.plist */,
 				F42626FF1F31F895005EF6F0 /* Word List.xcdatamodeld */,
+				F426271C1F33D95C005EF6F0 /* ReadingWord.swift */,
+				F426271E1F33DA4A005EF6F0 /* WritingWord.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -122,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				F42627061F3287DC005EF6F0 /* CoreDataHelper.swift */,
+				F426271A1F3317BE005EF6F0 /* FirebaseHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -220,6 +232,7 @@
 			files = (
 				F42626CA1F306687005EF6F0 /* LaunchScreen.storyboard in Resources */,
 				F42626C71F306687005EF6F0 /* Assets.xcassets in Resources */,
+				F42627191F331632005EF6F0 /* GoogleService-Info.plist in Resources */,
 				F42626C51F306687005EF6F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,11 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F426271F1F33DA4A005EF6F0 /* WritingWord.swift in Sources */,
 				F42627151F3294DF005EF6F0 /* WordListViewController.swift in Sources */,
 				F42627071F3287DC005EF6F0 /* CoreDataHelper.swift in Sources */,
 				F426270B1F328D2C005EF6F0 /* ReadingTableViewController.swift in Sources */,
 				F426270F1F328F1B005EF6F0 /* ReadingTableViewCell.swift in Sources */,
+				F426271B1F3317BE005EF6F0 /* FirebaseHelper.swift in Sources */,
 				F42627111F328F34005EF6F0 /* WritingTableViewCell.swift in Sources */,
+				F426271D1F33D95C005EF6F0 /* ReadingWord.swift in Sources */,
 				F426270D1F328D4B005EF6F0 /* WritingTableViewController.swift in Sources */,
 				F42627011F31F895005EF6F0 /* Word List.xcdatamodeld in Sources */,
 				F42627051F3286D7005EF6F0 /* ReadingViewController.swift in Sources */,

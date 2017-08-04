@@ -26,6 +26,7 @@ class WritingViewController: UIViewController {
         wordTitleTextField.text = word?.wordTitle ?? ""
         translationTextField.text = word?.translation ?? ""
         annotationTextView.text = word?.annotation ?? "annotation:"
+        
     }
     //        // 1
     //        if let note = note {
@@ -49,6 +50,9 @@ class WritingViewController: UIViewController {
             word.wordTitle = wordTitleTextField.text ?? ""
             word.translation = translationTextField.text ?? ""
             word.modificationTime = Date() as NSDate
+            word.annotation = annotationTextView.text ?? ""
+            FirebaseHelper.createWritingWords(annotation: word.annotation ?? "", translation: word.translation ?? "", wordTitle: word.wordTitle ?? "", wordModificationTime: word.modificationTime?.convertToString() ?? "")
+
             CoreDataHelper.saveWord()
         }
     }

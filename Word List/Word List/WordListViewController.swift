@@ -10,8 +10,24 @@ import Foundation
 import UIKit
 class WordListViewController: UIViewController {
     
+    @IBOutlet weak var readingnumber: UITextField!
+    
+    
+    @IBOutlet weak var writingnumber: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        var rword: [ReadingWords]?
+        var wword: [Words]?
+        
+        
+        rword = CoreDataHelper.retrieveReadingWord()
+        wword = CoreDataHelper.retrieveWord()
+        readingnumber.text = String(describing: (rword?.count ?? 0))
+        writingnumber.text = String(describing: (wword?.count ?? 0))
+        //writingnumber.text = String(describing: wword?.wordTitle?.characters.count)
+        //print(rword?.wordTitle?.characters.count ?? " :) ")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -27,7 +27,9 @@ class ReadingTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+//        FirebaseHelper.getReadingWords(wordTitle: words, completion: nil)
         words = CoreDataHelper.retrieveReadingWord()
+        
     }
 
     override func viewDidLoad() {
